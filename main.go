@@ -2,8 +2,14 @@ package main
 
 import "fmt"
 
+func plus(a ...int) int {
+    var total int
+    for _, item := range a{
+        total += item
+    }
+    return total
+}
 func main() {
-	fmt.Println("It Works!")
-	name := "12"
-
+	result := plus(2, 3, 4, 5)
+	fmt.Println(result)
 }
