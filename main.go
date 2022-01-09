@@ -2,24 +2,26 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/geniee44/nomadcoin/person"
 )
 
-func plus(a ...int) int {
-	var total int
-	for _, item := range a {
-		total += item
-	}
-	return total
-}
+// func plus(a ...int) int {
+// 	var total int
+// 	for _, item := range a {
+// 		total += item
+// 	}
+// 	return total
+// }
 
-type person struct {
-	name string
-	age  int
-}
+// type person struct {
+// 	name string
+// 	age  int
+// }
 
-func (p person) sayHello() {
-	fmt.Printf("Hello! My name is %s and I'm %d", p.name, p.age)
-}
+// func (p person) sayHello() {
+// 	fmt.Printf("Hello! My name is %s and I'm %d", p.name, p.age)
+// }
 
 func main() {
 	// result := plus(2, 3, 4, 5)
@@ -45,6 +47,7 @@ func main() {
 	// 	fmt.Println(dishes[i])
 	// }
 
-	nico := person{"bom", 23}
-	nico.sayHello()
+	nico := person.Person{}
+	nico.SetDetails("nico", 12)
+	fmt.Println(nico)
 }
